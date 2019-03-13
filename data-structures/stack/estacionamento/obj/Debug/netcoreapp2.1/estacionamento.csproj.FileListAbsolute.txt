@@ -1,0 +1,11 @@
+C:\Users\tecco\Desktop\university-classes-third-semester\data-structures\stack\estacionamento\obj\Debug\netcoreapp2.1\estacionamento.csprojAssemblyReference.cache
+C:\Users\tecco\Desktop\university-classes-third-semester\data-structures\stack\estacionamento\obj\Debug\netcoreapp2.1\estacionamento.csproj.CoreCompileInputs.cache
+C:\Users\tecco\Desktop\university-classes-third-semester\data-structures\stack\estacionamento\obj\Debug\netcoreapp2.1\estacionamento.AssemblyInfoInputs.cache
+C:\Users\tecco\Desktop\university-classes-third-semester\data-structures\stack\estacionamento\obj\Debug\netcoreapp2.1\estacionamento.AssemblyInfo.cs
+C:\Users\tecco\Desktop\university-classes-third-semester\data-structures\stack\estacionamento\bin\Debug\netcoreapp2.1\estacionamento.deps.json
+C:\Users\tecco\Desktop\university-classes-third-semester\data-structures\stack\estacionamento\bin\Debug\netcoreapp2.1\estacionamento.runtimeconfig.json
+C:\Users\tecco\Desktop\university-classes-third-semester\data-structures\stack\estacionamento\bin\Debug\netcoreapp2.1\estacionamento.runtimeconfig.dev.json
+C:\Users\tecco\Desktop\university-classes-third-semester\data-structures\stack\estacionamento\bin\Debug\netcoreapp2.1\estacionamento.dll
+C:\Users\tecco\Desktop\university-classes-third-semester\data-structures\stack\estacionamento\bin\Debug\netcoreapp2.1\estacionamento.pdb
+C:\Users\tecco\Desktop\university-classes-third-semester\data-structures\stack\estacionamento\obj\Debug\netcoreapp2.1\estacionamento.dll
+C:\Users\tecco\Desktop\university-classes-third-semester\data-structures\stack\estacionamento\obj\Debug\netcoreapp2.1\estacionamento.pdb
