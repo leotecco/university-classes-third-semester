@@ -152,6 +152,32 @@ namespace myApp
             Console.WriteLine("INVERSO DOS CARACTERES: " + Program.InversoDosCaracteres(s14).ToString().ToLower());
             Console.WriteLine(s14.Peek());
             Console.WriteLine("================");
+
+
+            Stack<char> s15 = new Stack<char>();
+            s15.Push('a');
+            s15.Push('D');
+            s15.Push('b');
+            s15.Push('D');
+            s15.Push('c');
+            s15.Push('D');
+            s15.Push('d');
+
+            Stack<char> s16 = new Stack<char>();
+            s16.Push('a');
+            s16.Push('D');
+            s16.Push('b');
+            s16.Push('D');
+            s16.Push('c');
+            s16.Push('d');
+            s16.Push('D');
+            s16.Push('e');
+
+            Console.WriteLine("LETRA D LETRA: " + Program.LetraDLetra(s15).ToString().ToLower());
+            Console.WriteLine(s15.Peek());
+            Console.WriteLine("LETRA D LETRA: " + Program.LetraDLetra(s16).ToString().ToLower());
+            Console.WriteLine(s16.Peek());
+            Console.WriteLine("================");
         }
 
         static void Transfere(Stack<string> s1, Stack<string> s2)
@@ -367,6 +393,34 @@ namespace myApp
             }
 
             return inversoDosCaracteres;
+        }
+
+        static bool LetraDLetra(Stack<char> s1)
+        {
+            bool letraDLetra = true;
+            bool deveSerLetraD = false;
+            Stack<char> stackAux = new Stack<char>();
+
+            while (s1.Count > 0 && letraDLetra)
+            {
+                char caractereAtual = s1.Pop();
+                stackAux.Push(caractereAtual);
+
+                if (deveSerLetraD && caractereAtual != 'D')
+                {
+                    letraDLetra = false;
+                }
+
+                deveSerLetraD = !deveSerLetraD;
+            }
+
+            while (stackAux.Count > 0)
+            {
+                char caractereAtual = stackAux.Pop();
+                s1.Push(caractereAtual);
+            }
+
+            return letraDLetra;
         }
     }
 }
