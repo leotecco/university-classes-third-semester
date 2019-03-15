@@ -1,10 +1,9 @@
 public class PrincipalCartao {
 
 	public static void main(String args[]) {
-		Cartao c = new Cartao();
+		Cartao c = new Cartao("Leonardo");
 		MaquinaCartao m = new MaquinaCartao();
 		
-		c.setTitular("Leonardo");
 		c.creditar(500);
 		
 		m.passar(c, 200);
