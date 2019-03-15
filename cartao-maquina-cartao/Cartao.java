@@ -1,6 +1,10 @@
 public class Cartao {
 	private float saldo;
 	private String titular;
+	
+	public Cartao(String t) {
+		titular = t;
+	}
 
 	public void creditar(float paramFloat) {
 		saldo += paramFloat;
