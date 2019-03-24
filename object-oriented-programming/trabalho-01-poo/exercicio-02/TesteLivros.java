@@ -1,10 +1,14 @@
+// Alan da Silva Perez - RA: 578886
+// Leonardo Jorge Tecco - RA: 577472
+
 import java.util.Scanner;
 
 public class TesteLivros {
 	public static void main(String args[]) {
 		Scanner s = new Scanner(System.in);
-		Livro l = new Livro();
+		Livro l = new Livro(); // cria objeto livro
 
+		// informa os valores para o objeto
 		System.out.println("CADASTRAR LIVRO ");
 		System.out.print("DIGITE O TITULO: ");
 		l.setTitulo(s.nextLine());
@@ -16,6 +20,7 @@ public class TesteLivros {
 		l.setPreco(s.nextFloat());
 		s.nextLine();
 		
+		// chama metodos que retornam os valores
 		System.out.println("LIVRO CADASTRADO");
 		System.out.printf("TITULO: %s\n", l.getTitulo());
 		System.out.printf("AUTOR: %s\n", l.getAutor());

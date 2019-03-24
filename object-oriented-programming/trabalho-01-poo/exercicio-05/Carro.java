@@ -1,15 +1,37 @@
+// Alan da Silva Perez - RA: 578886
+// Leonardo Jorge Tecco - RA: 577472
+
 public class Carro {
 	private String placa;
 	private String modelo;
 	private float tanque;
 	private float capacidadeTanque;
-	
-	public void andar() {
+	private float mediaDeConsumo;
+
+	public boolean andar(float km) {
+		float consumo = km / mediaDeConsumo;
+
+		if (tanque >= consumo) {
+			tanque -= consumo;
+
+			return true;
+		}
+
+		return false;
 	}
-	
-	public void abastecer() {
+
+	public float abastecer(float litros) {
+		if ((tanque + litros) < capacidadeTanque) {
+			tanque += litros;
+			return litros;
+		}
+
+		litros = capacidadeTanque - tanque;
+		tanque = capacidadeTanque;
+
+		return litros;
 	}
-	
+
 	public String getPlaca() {
 		return placa;
 	}
@@ -32,5 +54,13 @@ public class Carro {
 
 	public void setCapacidadeTanque(float c) {
 		capacidadeTanque = c;
+	}
+
+	public float getMediaDeConsumo() {
+		return mediaDeConsumo;
+	}
+
+	public void setMediaDeConsumo(float mc) {
+		mediaDeConsumo = mc;
 	}
 }
