@@ -88,8 +88,57 @@ public class PrincipalLocadora {
 						
 						switch(opcaoMenuCliente) {
 							case 1:
+								Cliente cliente = new Cliente();
+								
+								System.out.print("NOME: ");
+								cliente.setNome(scanner.nextLine());
+								System.out.print("CPF: ");
+								cliente.setCpf(scanner.nextLine());
+								System.out.print("RG: ");
+								cliente.setRg(scanner.nextLine());
+								System.out.print("TELEFONE: ");
+								cliente.setTelefone(scanner.nextLine());
+								System.out.print("CNH: ");
+								cliente.setCnh(scanner.nextLine());
+								System.out.print("VALIDADE CNH: ");
+								cliente.setValidadeCnh(scanner.nextLine());
+								
+								locadora.addCliente(cliente);
+								
+								break;
 							case 2:
+								int quantidadeClientes = locadora.getSizeClientes();
+								
+								System.out.println("");
+								
+								for (int i = 0; i < quantidadeClientes; i++) {
+									Cliente clienteAtual = locadora.getCliente(i);
+									
+									System.out.println("#" + i + " CLIENTE");
+									System.out.println("NOME: " + clienteAtual.getNome());
+									System.out.println("CPF: " + clienteAtual.getCpf());
+									System.out.println("RG: " + clienteAtual.getRg());
+									System.out.println("TELEFONE: " + clienteAtual.getTelefone());
+									System.out.println("CNH: " + clienteAtual.getCnh());
+									System.out.println("VALIDADE CNH: " + clienteAtual.getValidadeCnh());
+									
+									System.out.println("");
+								}
+								
+								break;
 							case 3:
+								System.out.print("NUMERO DO CLIENTE QUE DESEJA REMOVER: ");
+								int posicaoClienteRemovido = scanner.nextInt();
+								scanner.nextLine();
+								
+								try {
+									locadora.removeCliente(posicaoClienteRemovido);
+									System.out.println("CLIENTE REMOVIDO COM SUCESSO!");
+								} catch(Exception e) {
+									System.out.println("CLIENTE NAO ENCONTRADO!");
+								}
+								
+								break;
 						}
 					} while(opcaoMenuCliente != 0);
 					
@@ -102,8 +151,59 @@ public class PrincipalLocadora {
 						
 						switch(opcaoMenuVeiculo) {
 							case 1:
+								Veiculo veiculo = new Veiculo();
+								
+								System.out.print("PLACA: ");
+								veiculo.setPlaca(scanner.nextLine());
+								System.out.print("MODELO: ");
+								veiculo.setModelo(scanner.nextLine());
+								System.out.print("ANO: ");
+								veiculo.setAno(scanner.nextInt());
+								System.out.print("QUILOMETRAGEM: ");
+								veiculo.setQuilometragem(scanner.nextFloat());
+								scanner.nextLine();
+								System.out.print("LOCADO(S/N): ");
+								veiculo.setLocado(scanner.nextLine());
+								System.out.print("VALOR DA LOCACAO: ");
+								veiculo.setValorDaLocacao(scanner.nextFloat());
+								scanner.nextLine();
+								
+								locadora.addVeiculo(veiculo);
+								
+								break;
 							case 2:
+								int quantidadeVeiculos = locadora.getSizeVeiculos();
+								
+								System.out.println("");
+								
+								for (int i = 0; i < quantidadeVeiculos; i++) {
+									Veiculo veiculoAtual = locadora.getVeiculo(i);
+									
+									System.out.println("#" + i + " VEICULO");
+									System.out.println("PLACA: " + veiculoAtual.getPlaca());
+									System.out.println("MODELO: " + veiculoAtual.getModelo());
+									System.out.println("ANO: " + veiculoAtual.getAno());
+									System.out.println("QUILOMETRAGEM: " + veiculoAtual.getQuilometragem());
+									System.out.println("LOCADO(S/N): " + veiculoAtual.getLocado());
+									System.out.println("VALOR DA LOCACAO: " + veiculoAtual.getValorDaLocacao());									
+									
+									System.out.println("");
+								}
+								
+								break;
 							case 3:
+								System.out.print("NUMERO DO VEICULO QUE DESEJA REMOVER: ");
+								int posicaoVeiculoRemovido = scanner.nextInt();
+								scanner.nextLine();
+								
+								try {
+									locadora.removeVeiculo(posicaoVeiculoRemovido);
+									System.out.println("VEICULO REMOVIDO COM SUCESSO!");
+								} catch(Exception e) {
+									System.out.println("VEICULO NAO ENCONTRADO!");
+								}
+								
+								break;
 						}
 					} while(opcaoMenuVeiculo != 0);
 					

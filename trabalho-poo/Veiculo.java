@@ -3,7 +3,7 @@ public class Veiculo {
 	private String modelo;
 	private int ano;
 	private float quilometragem;
-	private boolean alocado;
+	private String locado;
 	private float valorDaLocacao;
 
     public String getPlaca() {
@@ -38,12 +38,12 @@ public class Veiculo {
         this.quilometragem = quilometragem;
     }
 
-    public boolean isAlocado() {
-        return alocado;
+    public String getLocado() {
+        return locado;
     }
 
-    public void setAlocado(boolean alocado) {
-        this.alocado = alocado;
+    public void setLocado(String locado) {
+        this.locado = locado;
     }
 
     public float getValorDaLocacao() {
